@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class ="soundAppCard">
+
+         <!--set effect video as loop-->
+        <div class="vide-container">
+            <video loop>
+                <source src ="./video/forest.mp4" type ="video/mp4"/>
+            </video>
+        </div>
+
+   
+        
+        <!--play container section--> 
+        <div class="player-container">
+
+            <h2 class="app-title">Relax Media Station</h2>
+            <audio class ="song" loop>
+                <source src="./sounds/forest_lullaby.mp3"/>
+            </audio>
+            <img src = "./svg/play.svg" alt="play" class="play">
+
+        <!--time track outline-->
+            <svg 
+                class = "track-outline"  
+                width="453" 
+                height="453" 
+                viewBox="0 0 453 453" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg">
+                    <circle 
+                        cx="226.5" 
+                        cy="226.5" 
+                        r="216.5" 
+                        stroke="white" 
+                        stroke-width="20"/>
+            </svg>
+        
+        <!--time moving outline-->
+            <svg  
+                class="moving-outline"  
+                width="453" 
+                height="453" 
+                viewBox="0 0 453 453" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg">
+                    <circle 
+                        cx="226.5" 
+                        cy="226.5" 
+                        r="216.5" 
+                        stroke="#847250" 
+                        stroke-width="20"/>
+            </svg>
+
+            <h3 class ="time-progress   ">0:00</h3>
+        </div>
+
+        
+        <!--sound selection container-->        
+        <div class ="sound-pick">
+            <div class ="songs">
+
+                   
+                    <div class ="song1">
+                
+                        <div class="media_btn">
+                            <button data-sound="./sounds/forest_lullaby.mp3" data-video="./video/forest.mp4">
+                                <image src="./svg/audio.svg" alt="forest_lullaby" />
+                            </button>
+                        </div>
+                        <div class="title">
+                            <h3> Forest Lullaby</h3>   
+                        </div>
+                    </div>
+                
+                    <div class ="song2">
+                        <div class="media_btn">
+                            <button data-sound="./sounds/beat_of_nature.mp3" data-video="./video/nature.mp4">
+                                <image src="./svg/audio.svg" alt="nature" />
+                            </button>
+                        </div>
+                        
+                        <div class="title">    
+                            <h3> Beat of Nature</h3>
+                        </div>
+                    </div>       
+                
+                    <div class="song3">  
+                        <div class="media_btn">
+                            <button data-sound="./sounds/relaxing.mp3" data-video="./video/relaxing.mp4">
+                                <image src="./svg/audio.svg" alt="relaxing" />
+                            </button>
+                        </div>
+                        <div class="title"> 
+                            <h3>Ambient Piano</h3>
+                        </div>    
+            </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

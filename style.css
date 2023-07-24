@@ -1,0 +1,169 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+.soundAppCard{
+    height:100vh;   
+    min-height: 90% ;
+    min-width: 70%;
+}
+
+ /*set player container */
+.player-container {
+    height: 65%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+ /*set song title margin */
+.song_title{
+    margin-top: 20px;
+}
+
+
+ /*set video position */
+video{   
+    position:fixed;
+    top:0%;
+    left:0%;
+    width:100%;
+    z-index: -1;
+   
+}
+
+ /*set position for player icon */
+.player-container{
+    position: relative;  
+}
+
+ /*set h2 position */
+.player-container h2{
+    position: absolute;
+    height: 10%;
+    top:20%;
+    left:50%;
+    transform:translate(-50%, -50%)
+   
+}
+
+ /*set h2 style*/
+h2{
+    color:rgb(66, 49, 2);
+    font-size: 30px;
+    font-style: italic;
+    font-family:"Helvetica Neue",  Arial, Helvetica, sans-serif;
+      
+}
+ /*set img position to center of the player-container svg */
+.player-container img{
+    position: absolute;
+    height: 15%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%)
+}
+
+ /*set SVG position to center */
+.player-container svg{
+    position: absolute;
+    height: 50%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%) rotate(-90deg); /* to truly center the child element and duration display start from top*/
+    pointer-events: none;
+}
+
+ /*set current time style*/
+.time-progress{
+    position: absolute;
+    color:white;
+    font-size:30px;
+    top:85%;
+    left:50%;
+    bottom: 10%;
+    transform:translate(-50%, -50%) 
+}
+
+ /*set sound picker container*/
+ .sound-pick{
+     height: auto;
+     width:100%; 
+     display:flex;
+     justify-content: center;
+     flex-wrap: wrap;
+}
+
+ /*set sound pick position*/
+.sound-pick{
+    position: relative;         
+}
+
+ /*set sound svg position*/
+.sound-pick svg{
+    position:absolute;
+}
+
+  /*set button style */
+.sound-pick button{
+    color: white;
+    width: 3.5%;
+    height: 22%;
+    background:none;
+    cursor:pointer;
+    border-radius: 5px;
+    border: solid white;
+    transition: all 0.5s ease;
+}
+
+  /*set button position */
+.sound-pick button{
+    position: absolute;
+}
+
+
+  /*set button hover color */
+.sound-pick button:hover{
+    color:rgb(3, 57, 73);
+    background: rgb(107, 98, 67);
+}
+
+  /*set songs container */
+.songs{
+    width:80%;
+    max-width: 600px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the container horizontally */
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*set each song content position and style */
+.song1, .song2, .song3{
+    height: 70px;
+    margin:3px;
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: flex-start;   
+    box-sizing: space-around ;
+    width:100%;
+    border-bottom: 3px solid white; 
+    
+}
+    
+/*set title position */
+.title{
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+/*set title text color */
+h3{
+    color:white;
+}
