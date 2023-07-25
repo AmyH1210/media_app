@@ -22,7 +22,7 @@ const media = function(){
         outline.style.strokeDashoffset = outlineLength;  //determines the distance by which the dash pattern is offset
 
 
-    //function to play a different sound when a user click a each button
+    //function to play a different sound when a user click  each button
     sounds.forEach((button)=> {         // iterates over each element in the sounds NodeList using the forEach method
         button.addEventListener('click', () =>{
            const soundSrc = button.getAttribute('data-sound');   //retrieves the value of the data-sound attribute of the clicked button
@@ -61,21 +61,21 @@ const media = function(){
         let minutes = Math.floor(elapsed /60);
         
 
-    //animate the circle
-     let progress = outlineLength - (currentTime /timeDuration) * outlineLength;
-     outline.style.strokeDashoffset = progress;
+        //animate the circle
+        let progress = outlineLength - (currentTime /timeDuration) * outlineLength;
+        outline.style.strokeDashoffset = progress;
      
 
-    //count down time
-    timeDisplay.textContent = minutes +":" + seconds
+        //count down time
+        timeDisplay.textContent = minutes +":" + seconds
 
-    // function to stop from playing when current time position goes back to 0
-    if(currentTime >= timeDuration){
-        audio.pause();     //pauses the audio playback by calling the pause() method. This stops the audio from playing
-        audio.currentTime =0;   //sets the current playback time of the audio to 0, effectively resetting it to the beginning of the audio
-        playButton.src ="./svg/play.svg"
-        videoEffect.pause();   //pauses the playback of a video effect by calling the pause() method 
-    }
+        // function to stop playing when current time position goes back to 0
+        if(currentTime >= timeDuration){
+            audio.pause();     //pauses the audio playback by calling the pause() method. This stops the audio from playing
+            audio.currentTime =0;   //sets the current playback time of the audio to 0, effectively resetting it to the beginning of the audio
+            playButton.src ="./svg/play.svg"
+            videoEffect.pause();   //pauses the playback of a video effect by calling the pause() method 
+        }
 
     };
 };
